@@ -1,0 +1,957 @@
+@charset "utf-8";
+
+/*=======================================
+전체 페이지 공통 스타일
+=======================================*/
+.fixed-btn-box {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    max-width: 750px;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.25s;
+    z-index: 1;
+}
+.fixed-btn-box img {
+    width: 100%;
+}
+.fixed-btn-box .btn {
+    width: 50%;
+}
+.fixed-btn-box.active {
+    opacity: 1;
+    -webkit-box-shadow: 1px -8px 34px 0px rgba(0,0,0,0.5);
+    box-shadow: 1px -8px 34px 0px rgba(0,0,0,0.5);
+}
+
+/*=======================================
+메인
+=======================================*/
+main .grid {
+    overflow: hidden;
+    background-color: #dbdbdb;
+}
+main img {
+    width: 100%;
+}
+main .gallery {
+    background: url('../images/main/gallery-bg.png') no-repeat center top;
+    background-size: cover;
+}
+main .img-list {
+    padding: 0 6.66%;
+}
+main .img-list ul {
+    display: inline-block;
+    width: 47.5%;
+    vertical-align: top;
+}
+main .img-list li {
+    margin-bottom: 1.5rem;
+    -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+}
+main .img-list .list-rt {
+    margin-left: 5%;
+}
+main .img-list img {
+    width: 100%;
+}
+main .gallery .btn-box {
+    padding: 0.5rem 0 3rem;
+    text-align: center;
+}
+main .gallery .btn {
+    width: 13.33%;;
+}
+/* 쿠폰획득 모달
+=======================================*/
+.modal-wrap.coupon {
+    width: 27.5rem;
+    text-align: center;
+}
+.modal-wrap.coupon .success {
+    padding: 7rem 0 10.5rem;
+    background: url('../images/popup/coupon-success-bg.png') no-repeat center top;
+    background-size: 100%;
+}
+.modal-wrap.coupon .success .tit {
+    font-weight: 400;
+    font-size: 1.9rem;
+    color: #b80013;
+}
+.modal-wrap.coupon .success p {
+    padding-top: 1rem;
+    font-size: 1.4rem;
+    line-height: 1.3;
+}
+.modal-wrap.coupon .success .btn-box {
+    padding-top: 1.25rem;
+}
+.modal-wrap.coupon .success .btn {
+    padding: 1rem 0;
+    width: 15rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #412e34;
+    background-color: #ffdd00;
+    border-radius: 3px;
+}
+.modal-wrap.coupon .success .btn .label {
+    padding: 5px 0 5px 1.75rem;
+    background: url('../images/popup/coupon-kakao.png') no-repeat center left;
+    background-size: 1.25rem;
+}
+.modal-wrap.coupon .fail {
+    padding-top: 3.5rem;
+    background-color: #fff;
+    border-radius: 1.25rem;
+}
+.modal-wrap.coupon .fail .tit {
+    font-size: 1.6rem;
+    line-height: 1.4;
+}
+.modal-wrap.coupon .fail p {
+    padding: 1rem 0 2rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: #999;
+}
+.modal-wrap.coupon .fail .btn-box {
+    border-top: 1px solid #f6f6f6;
+}
+.modal-wrap.coupon .fail .btn {
+    display: block;
+    padding: 1.75rem 0;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+/*=======================================
+서브 페이지 공통 스타일
+=======================================*/
+section {
+    padding-bottom: 5rem;
+}
+.nickbox {
+    background-color: #504e83;
+}
+.nickbox .txt {
+    display: block;
+    font-size: 1.2rem;
+    line-height: 3.5rem;
+    color: #fff;
+}
+.page-titbox {
+    padding: 5rem 0;
+}
+.page-titbox .tit {
+    font-size: 2.4rem;
+}
+.page-titbox .txt {
+    padding-top: 2rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.scltop-btn {
+    display: inline-block;
+    position: absolute;
+    bottom: -5rem;
+    left: 50%;
+    -webkit-transform: translate(-50%, 25%);
+    transform: translate(-50%, 25%);
+    margin-left: 16.25rem;
+    width: 5rem;
+    background-color: #fff;
+    border: 2px solid #ededed;
+    border-radius: 100%;
+    box-shadow: 5px 0 10px rgba(0,0,0,0.1);
+    transition: 0.25s;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 1;
+    cursor: pointer;
+}
+.scltop-btn img {
+    width: 100%;
+}
+.scltop-btn.active {
+    position: fixed;
+    bottom: 7.5rem;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+.cpn-default {
+    padding: 7rem 0;
+    border-top: 2px solid #dcdcdc;
+    text-align: center;
+}
+.cpn-default p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+/*=======================================
+쿠폰함
+=======================================*/
+.cpnbox-titbox {
+    color: #fff;
+    text-align: center;
+    background: linear-gradient(to top, #222254, #28285c, #2e2d64, #35336c, #3b3974);
+}
+.cpnbox-titbox .date {
+    display: inline-block;
+    margin-top: 1rem;
+    width: 8rem;
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    background-color: #504e83;
+    border-radius: 2rem;
+}
+.cpnbox-titbox .txt {
+    padding-top: 3rem;
+    font-weight: 400;
+    font-size: 1.9rem;
+}
+.cpnbox-menu {
+    padding: 3rem 0;
+}
+.cpnbox-menu .btn {
+    display: block;
+    position: relative;
+    padding: 2rem 0;
+    border-top: 2px solid #ebebeb;
+}
+.cpnbox-menu .btn:last-child {
+    border-bottom: 2px solid #ebebeb;
+}
+.cpnbox-menu .btn .label {
+    padding: 0.5rem 0 0.5rem 3.5rem;
+    font-size: 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 2rem;
+}
+.cpnbox-menu .btn:first-child .label {
+    background-image: url('../images/sub/coupon-menu-ico-01.png');
+}
+.cpnbox-menu .btn:last-child .label {
+    background-image: url('../images/sub/coupon-menu-ico-02.png');
+}
+.cpnbox-menu .btn .arw {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 1rem;
+}
+.cpnbox-list li {
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 100%;
+    background-image: url('../images/sub/coupon-bg-on.png');
+    cursor: pointer;
+}
+.cpnbox-list li:before {
+    position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,0.25);
+	content: "";
+    -webkit-transform: scale3d(1.5,1.2,1) rotate3d(0,0,1,45deg) translate3d(0,-160%,0);
+    transform: scale3d(1.5,1.2,1) rotate3d(0,0,1,45deg) translate3d(0,-160%,0);
+    -webkit-animation: cpnon 1.1s infinite cubic-bezier(0.96, 0.31, 0.53, 0.99);
+    animation: cpnon 1.1s infinite cubic-bezier(0.96, 0.31, 0.53, 0.99);
+}
+@-webkit-keyframes cpnon {
+    0% {
+        -webkit-transform: scale3d(1.5,1.2,1) rotate3d(0,0,1,45deg) translate3d(0,-160%,0);
+        transform: scale3d(1.5,1.2,1) rotate3d(0,0,1,45deg) translate3d(0,-160%,0);
+    }
+    100% {
+        -webkit-transform: scale3d(1.5,1.2,1) rotate3d(0,0,1,45deg) translate3d(0,160%,0);
+        transform: scale3d(1.5,1.2,1) rotate3d(0,0,1,45deg) translate3d(0,160%,0);
+    }
+}
+@keyframes cpnon {
+    0% {
+        -webkit-transform: scale3d(1.5,1.2,1) rotate3d(0,0,1,45deg) translate3d(0,-160%,0);
+        transform: scale3d(1.5,1.2,1) rotate3d(0,0,1,45deg) translate3d(0,-160%,0);
+    }
+    100% {
+        -webkit-transform: scale3d(1.5,1.2,1) rotate3d(0,0,1,45deg) translate3d(0,160%,0);
+        transform: scale3d(1.5,1.2,1) rotate3d(0,0,1,45deg) translate3d(0,160%,0);
+    }
+}
+.cpnbox-list li + li {
+    margin-top: 0.5rem;
+}
+.cpnbox-list .ico,
+.cpnbox-list .txt-box {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+.cpnbox-list .ico {
+    width: 10.4rem;
+}
+.cpnbox-list .ico img {
+    width: 100%;
+}
+.cpnbox-list .txt-box {
+    padding-bottom: 33%;
+    width: 21.1rem;
+    height: 0;
+}
+.cpnbox-list .txt-box .txt {
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.cpnbox-list .txt-box strong {
+    display: block;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    color: #fff;
+}
+.cpnbox-list .txt-box span {
+    display: block;
+    padding-top: 0.5rem;
+    font-size: 1.1rem;
+    color: #ffdd3e;
+}
+.cpnbox-list li.off {
+    background-image: url('../images/sub/coupon-bg-off.png');
+}
+.cpnbox-list li.off:before {
+    display: none;
+}
+.cpnbox-list li.off .txt-box span {
+    color: #e0e0e0;
+}
+/* 경품 당첨 모달
+=======================================*/
+.modal-wrap.wng {
+    width: 31.5rem;
+}
+.modal-wrap.wng .modal-cont {
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 1.5rem;
+}
+.modal-wrap.wng .top {
+    padding: 4rem 0;
+}
+.modal-wrap.wng .top-tit-box .txt {
+    padding-top: 1.25rem;
+    line-height: 1.2;
+}
+.modal-wrap.wng .top-img-box {
+    position: relative;
+}
+.modal-wrap.wng .top-img-box .gift {
+    position: relative;
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+    opacity: 0;
+    width: 100%;
+    z-index: 1;
+}
+.modal-wrap.wng.active .top-img-box .gift {
+    -webkit-animation: bouncedrop 0.65s 0.15s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+    animation: bouncedrop 0.65s 0.15s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes bouncedrop {
+    0% {
+        -webkit-transform: translateY(50%);
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    70% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+    75% {
+        -webkit-transform: translateY(2%);
+        transform: translateY(2%);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes bouncedrop {
+    0% {
+        -webkit-transform: translateY(50%);
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    70% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+    75% {
+        -webkit-transform: translateY(2%);
+        transform: translateY(2%);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.modal-wrap.wng .top-img-box .ico {
+    position: absolute;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+    -webkit-animation: firework 0.65s 0.25s infinite ease-out;
+    animation: firework 0.65s 0.25s infinite ease-out;
+    z-index: 0;
+}
+@-webkit-keyframes firework {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes firework {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.modal-wrap.wng .top-img-box .ico-1 {
+    top: 9.21%;
+    left: 15.87%;
+    width: 19.05%;
+}
+.modal-wrap.wng .top-img-box .ico-2 {
+    top: 3.95%;
+    right: 20.05%;
+    width: 11.43%;
+    animation-delay: 0.5s;
+}
+.modal-wrap.wng .btm {
+    padding: 2.5rem 2rem;
+}
+.modal-wrap.wng .btm .txt-box .txt {
+    font-size: 1.3rem;
+    line-height: 1.4;
+}
+.modal-wrap.wng .btm .txt-box .desc {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #504e83;
+}
+.modal-wrap.wng .cpn-box {
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    text-align: center;
+    border-top: 2px solid #e3e6e9;
+    border-bottom: 2px solid #e3e6e9;
+}
+.modal-wrap.wng .cpn-box strong {
+    font-size: 1.6rem;
+}
+.modal-wrap.wng .form-box {
+    padding: 2rem 0 3rem;
+    text-align: left;
+}
+.modal-wrap.wng .input-field label,
+.modal-wrap.wng .input-field input[type="text"] {
+    font-size: 1.3rem;
+    line-height: 4rem;
+}
+.modal-wrap.wng .input-field label {
+    width: 23.5%;
+}
+.modal-wrap.wng .input-field input[type="text"] {
+    padding: 0 1.5rem;
+    width: 76.5%;
+    height: 4rem;
+}
+.modal-wrap.wng .input-field + .chk-field {
+    padding-top: 2rem;
+}
+.modal-wrap.wng .chk-field .label:before {
+    margin-right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.modal-wrap.wng .chk-field .label {
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+}
+.modal-wrap.wng .chk-field a {
+    float: right;
+    font-size: 1.1rem;
+    line-height: 2.5rem;
+    color: #999;
+}
+.modal-wrap.wng .gift-box {
+    padding-top: 2rem;
+}
+.modal-wrap.wng .gift-box img {
+    width: 100%;
+}
+.modal-wrap.wng .btn-box .btn {
+    display: block;
+    padding: 2rem 0;
+    font-weight: 700;
+    font-size: 1.6rem;
+    border-top: 2px solid #e3e6e9;
+}
+.modal-wrap.wng .btn-box.submit .btn {
+    color: #fff;
+    background-color: #273788;
+    border-top-color: #273788;
+}
+.modal-wrap.wng .success .top {
+    overflow: hidden;
+    padding-bottom: 0;
+    color: #fff;
+    background-color: #3c3a75;
+}
+.modal-wrap.wng .success .top-tit-box .tit {
+    font-size: 2.2rem;
+}
+.modal-wrap.wng .success .top-tit-box .txt {
+    font-size: 1.9rem;
+}
+.modal-wrap.wng .fail .top {
+    background-color: #ced3d8;
+}
+.modal-wrap.wng .fail .top-tit-box .tit {
+    font-size: 1.6rem;
+}
+.modal-wrap.wng .fail .top-tit-box .txt {
+    font-size: 1.3rem;
+}
+
+/*=======================================
+쿠폰 캘린더 & 모아보기
+=======================================*/
+.cpn-descbox {
+    padding: 2.25rem 0;
+    background-color: #f4f4f4;
+    border-top: 2px solid #dcdcdc;
+}
+.cpn-descbox .txt {
+    font-size: 1.5rem;
+    line-height: 1.3;
+}
+.cpn-search input[type="text"] {
+    display: inline-block;
+    padding: 0 1.5rem;
+    width: 79%;
+    font-size: 1.1rem;
+    line-height: 3.75rem;
+    height: 3.75rem;
+    border: 2px solid #ededed;
+    vertical-align: top;
+}
+.cpn-search button {
+    margin-left: 2%;
+    width: 19%;
+    height: 3.75rem;
+    font-size: 1.3rem;
+    color: #fff;
+    background-color: #504e83;
+    border: 2px solid #504e83;
+    border-radius: 2px;
+    vertical-align: top;
+}
+.cpn-tblbox {
+    padding-top: 1.5rem;
+}
+.cpn-tblbox table {
+    width: 100%;
+    border-bottom: 2px solid #ededed;
+}
+.cpn-tblbox tr {
+    border-top: 2px solid #ededed;
+}
+.cpn-tblbox th {
+    padding: 1.25rem 0;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+.cpn-tblbox td {
+    font-size: 1.5rem;
+    background-color: #f9f9f9;
+}
+/* 캘린더
+=======================================*/
+.cpn-calendar th:first-child,
+.cpn-calendar th:nth-child(2) {
+    width: 30%;
+}
+.cpn-calendar th:nth-child(3) {
+    width: 18%;
+}
+.cpn-calendar th:last-child {
+    width: 28%;
+}
+.cpn-calendar td {
+    text-align: center;
+}
+.cpn-calendar td:last-child {
+    text-align: right;
+}
+.cpn-calendar a {
+    display: block;
+    padding: 2rem 0;
+}
+.cpn-calendar .ico {
+    display: inline-block;
+    margin-top: -5px;
+    margin-right: 0.5rem;
+    width: 1.5rem;
+    vertical-align: middle;
+}
+.cpn-calendar .arw {
+    display: inline-block;
+    margin-right: 3rem;
+    width: 1.5rem;
+}
+/* 모아보기
+=======================================*/
+.cpn-all th {
+    text-align: left;
+}
+.cpn-all th .btn {
+    padding-right: 2rem;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-image: url('../images/sub/coupon-arw-02.png');
+    background-size: 1rem;
+}
+.cpn-all th .btn.active {
+    background-image: url('../images/sub/coupon-arw-03.png')
+}
+.cpn-all th:first-child {
+    padding-left: 3rem;
+    width: 53%;
+}
+.cpn-all th:nth-child(2) {
+    width: 31%;
+}
+.cpn-all th:last-child {
+    width: 26%;
+}
+.cpn-all td {
+    position: relative;
+    padding: 1.25rem 0;
+    line-height: 3rem;
+}
+.cpn-all td:first-child {
+    padding-left: 3rem;
+}
+.cpn-all td:nth-child(2) {
+    color: #666;
+}
+.cpn-all .cpn-img {
+    width: 3rem;
+}
+
+/*=======================================
+미디어쿼리
+=======================================*/
+@media only screen and (max-width: 750.98px) {
+
+    /*=======================================
+    메인
+    =======================================*/
+    /* 쿠폰획득 모달
+    =======================================*/
+    .modal-wrap.coupon {
+        width: 20rem;
+    }
+    .modal-wrap.coupon .success {
+        padding: 4.5rem 0 7.5rem;
+    }
+    .modal-wrap.coupon .success .tit {
+        font-size: 1.5rem;
+    }
+    .modal-wrap.coupon .success p {
+        padding-top: 0.75rem;
+        font-size: 1rem;
+    }
+    .modal-wrap.coupon .success .btn-box {
+        padding-top: 1rem;
+    }
+    .modal-wrap.coupon .success .btn {
+        padding: 0.75rem 0;
+        width: 12rem;
+        font-size: 0.8rem;
+    }
+    .modal-wrap.coupon .success .btn .label {
+        padding: 4px 0 5px 1.5rem;
+        background-size: 1rem;
+    }
+    .modal-wrap.coupon .fail {
+        padding-top: 2.5rem;
+    }
+    .modal-wrap.coupon .fail .tit {
+        font-size: 1.2rem;
+    }
+    .modal-wrap.coupon .fail p {
+        padding: 0.75rem 0 1.75rem;
+        font-size: 0.9rem;
+    }
+    .modal-wrap.coupon .fail .btn {
+        padding: 1.25rem 0;
+        font-size: 1.2rem;
+    }
+
+    /*=======================================
+    쿠폰함
+    =======================================*/
+    .cpnbox-list .ico {
+        width: 33%;
+    }
+    .cpnbox-list .txt-box {
+        width: 67%;
+    }
+
+}
+
+@media only screen and (max-width: 575.98px) {
+
+    /*=======================================
+    메인
+    =======================================*/
+    /* 쿠폰획득 모달
+    =======================================*/
+    .modal-wrap.coupon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+    }
+
+    /*=======================================
+    서브 페이지 공통 스타일
+    =======================================*/
+    .nickbox .txt {
+        font-size: 0.9rem;
+    }
+    .page-titbox {
+        padding: 3.25rem 0;
+    }
+    .page-titbox .tit {
+        font-size: 1.8rem;
+    }
+    .page-titbox .txt {
+        padding-top: 1rem;
+        font-size: 1.1rem;
+    }
+    .scltop-btn {
+        bottom: -4rem;
+        left: auto;
+        right: 1rem;
+        -webkit-transform: translate(0, 25%);
+        transform: translate(0, 25%);
+        margin-left: auto;
+        width: 3.5rem;
+    }
+    .scltop-btn.active {
+        bottom: 5.5rem;
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    /*=======================================
+    쿠폰함
+    =======================================*/
+    .cpnbox-titbox .date {
+        margin-top: 0.75rem;
+        width: 6.5rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .cpnbox-titbox .txt {
+        padding-top: 2rem;
+    }
+    .cpnbox-menu {
+        padding: 2rem 0;
+    }
+    .cpnbox-menu .btn {
+        padding: 1.5rem 0;
+    }
+    .cpnbox-menu .btn .label {
+        padding: 0.25rem 0 0.25rem 2.5rem;
+        font-size: 1.1rem;
+        background-size: 1.5rem;
+    }
+    .cpnbox-menu .btn .arw {
+        width: 0.75rem;
+    }
+    .cpnbox-list .txt-box .txt {
+        left: 1.5rem;
+    }
+    .cpnbox-list .txt-box strong {
+        font-size: 1.2rem;
+    }
+    .cpnbox-list .txt-box span {
+        padding-top: 0.25rem;
+        font-size: 0.8rem;
+    }
+    /* 경품 당첨 모달
+    =======================================*/
+    .modal-wrap.wng {
+        width: 85%;
+    }
+    .modal-wrap.wng .top {
+        padding: 2rem 0;
+    }
+    .modal-wrap.wng .success .top-tit-box .tit {
+        font-size: 1.6rem;
+    }
+    .modal-wrap.wng .success .top-tit-box .txt {
+        font-size: 1.3rem;
+    }
+    .modal-wrap.wng .fail .top-tit-box .tit {
+        font-size: 1.2rem;
+    }
+    .modal-wrap.wng .fail .top-tit-box .txt {
+        font-size: 1rem;
+    }
+    .modal-wrap.wng .btm {
+        padding: 2rem 1.5rem;
+    }
+    .modal-wrap.wng .btm .txt-box .txt {
+        font-size: 1rem;
+    }
+    .modal-wrap.wng .btm .txt-box .desc {
+        font-size: 0.8rem;
+    }
+    .modal-wrap.wng .cpn-box {
+        padding: 1.5rem 0;
+        margin-bottom: 1.5rem;
+        border-width: 1px;
+    }
+    .modal-wrap.wng .cpn-box strong {
+        font-size: 1.2rem;
+    }
+    .modal-wrap.wng .form-box {
+        padding: 0.5rem 0 2rem;
+    }
+    .modal-wrap.wng .input-field label,
+    .modal-wrap.wng .input-field input[type="text"] {
+        font-size: 1rem;
+        line-height: 3rem;
+    }
+    .modal-wrap.wng .input-field input[type="text"] {
+        padding: 0 1rem;
+        height: 3rem;
+    }
+    .modal-wrap.wng .chk-field .label {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .modal-wrap.wng .chk-field .label:before {
+        margin-top: -2px;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .modal-wrap.wng .chk-field a {
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+    }
+    .modal-wrap.wng .btn-box .btn {
+        padding: 1.25em 0;
+        font-size: 1.3rem;
+        border-top-width: 1px;
+    }
+
+    /*=======================================
+    쿠폰 캘린더 & 모아보기
+    =======================================*/
+    .cpn-descbox {
+        padding: 1.5rem 0;
+        border-top-width: 1px;
+    }
+    .cpn-descbox .txt {
+        font-size: 1.1rem;
+    }
+    .cpn-search input[type="text"],
+    .cpn-search button {
+        height: 2.8rem;
+        border-width: 1px;
+    }
+    .cpn-search input[type="text"] {
+        line-height: 2.8rem;
+        font-size: 0.9rem;
+    }
+    .cpn-search button {
+        font-size: 1rem;
+    }
+    .cpn-tblbox tr {
+        border-top-width: 1px;
+    }
+    .cpn-tblbox th {
+        padding: 0.9rem 0;
+        font-size: 1rem;
+    }
+    .cpn-tblbox td {
+        font-size: 1.1rem;
+    }
+    /* 캘린더
+    =======================================*/
+    .cpn-calendar a {
+        padding: 1.5rem 0;
+    }
+    .cpn-calendar .ico {
+        margin-top: -3px;
+        width: 1.25rem;
+    }
+    .cpn-calendar .arw {
+        margin-right: 1.5rem;
+        width: 1.25rem;
+    }
+    /* 모아보기
+    =======================================*/
+    .cpn-all th:first-child,
+    .cpn-all td:first-child {
+        padding-left: 2rem;
+    }
+    .cpn-all td {
+        padding: 1.5rem 0;
+    }
+    .cpn-all .cpn-img {
+        width: 2rem;
+    }
+
+}

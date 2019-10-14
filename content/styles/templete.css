@@ -1,0 +1,219 @@
+@charset "utf-8";
+/*=======================================
+레이아웃
+=======================================*/
+html {
+    font-size: 20px;
+}
+html.fixed {
+    overflow: hidden;
+    width: 100%;
+}
+.grid {
+    position: relative;
+    max-width: 750px;
+}
+.grid-padd {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+/*=======================================
+컬러칩
+=======================================*/
+.fnt-red {
+    color: #b80013;
+}
+.fnt-ppl {
+    color: #3c3a75;
+}
+.fnt-ylw {
+    color: #ffdd3e;
+}
+
+/*=======================================
+폼
+=======================================*/
+.input-field,
+.chk-field {
+    padding-top: 1rem;
+}
+.input-field label,
+.input-field input[type="text"] {
+    display: inline-block;
+    vertical-align: top;
+}
+.input-field input[type="text"] {
+    border: 2px solid #e3e6e9;
+    border-radius: 5px;
+}
+.chk-field label {
+    display: block;
+    cursor: pointer;
+}
+.chk-field input[type="checkbox"] {
+    display: none;
+}
+.chk-field .label:before {
+    content: "";
+    display: inline-block;
+    border: 2px solid #e3e6e9;
+    background: #fff url('../images/sub/form-checkbox-ico.png') no-repeat center;
+    background-size: 0;
+    border-radius: 5px;
+    transition: background 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    vertical-align: top;
+}
+.chk-field input[type="checkbox"]:checked + .label:before {
+    background: #3c3a75 url('../images/sub/form-checkbox-ico.png') no-repeat center;
+    background-size: 100%;
+    border-color: #3c3a75;
+}
+
+/*=======================================
+컴포넌트
+=======================================*/
+.btn {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+}
+.btn:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
+    padding-bottom: 100%;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    border-radius: 100%;
+    background: rgba(255, 255, 255, 0.15);
+}
+.btn:hover:before,
+.btn:active:before {
+    -webkit-animation: btnhover 0.75s linear;
+    animation: btnhover 0.75s linear;
+}
+@-webkit-keyframes btnhover {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate(-50%, -50%) scale(0);
+        transform: translate(-50%, -50%) scale(0);
+    }
+    30% {
+        opacity: 1;
+        -webkit-transform: translate(-50%, -50%) scale(0.6);
+        transform: translate(-50%, -50%) scale(0.6);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(-50%, -50%) scale(1.2);
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+}
+@keyframes btnhover {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate(-50%, -50%) scale(0);
+        transform: translate(-50%, -50%) scale(0);
+    }
+    30% {
+        opacity: 1;
+        -webkit-transform: translate(-50%, -50%) scale(0.6);
+        transform: translate(-50%, -50%) scale(0.6);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(-50%, -50%) scale(1.2);
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+}
+.btn .label {
+    display: inline-block;
+}
+
+/*=======================================
+헤더 & 푸터
+=======================================*/
+footer {
+    margin-bottom: 5rem;
+}
+footer img {
+    width: 100%;
+}
+footer .copyright {
+    position: relative;
+}
+footer .copyright .btn {
+    position: absolute;
+    top: 50%;
+    right: 6.66%;
+    transform: translateY(-50%);
+    width: 17.33%;
+    height: 300%;
+    /* background: rgba(0, 0, 0, 0.5); */
+}
+
+/*=======================================
+모달
+=======================================*/
+.modal-popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+.modal-popup.active {
+    display: block;
+}
+.modal-wrap {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+/*=======================================
+미디어쿼리
+=======================================*/
+@media only screen and (max-width: 750.98px) {
+
+    /*=======================================
+    레이아웃
+    =======================================*/
+    html {
+        font-size: 15px;
+    }
+    .grid-padd {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    /*=======================================
+    모달
+    =======================================*/
+    .modal-wrap {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    
+}
+@media only screen and (max-width: 575.98px) {
+
+    /*=======================================
+    폼
+    =======================================*/
+    .input-field input[type="text"],
+    .chk-field .label:before {
+        border-width: 1px;
+    }
+}

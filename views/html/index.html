@@ -1,0 +1,106 @@
+<!Doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <title>Hide & Seek</title>
+        <meta name="title" content="Hide & Seek">
+        <meta name="description" content="기아자동차X카카오맵이 함께하는 전국민 K5신차 찾기 이벤트">
+        <meta name="keywords" content="K5, 기아자동차, 카카오맵, 신차">
+        <meta name="author" content="univJOYSEUL">
+        <meta property="og:title" content="Hide & Seek">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="">
+        <meta property="og:description" content="기아자동차X카카오맵이 함께하는 전국민 K5신차 찾기 이벤트">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Hide & Seek">
+        <meta name="twitter:url" content="">
+        <meta name="twitter:image" content="">
+        <meta name="twitter:description" content="기아자동차X카카오맵이 함께하는 전국민 K5신차 찾기 이벤트">
+    
+        <link rel="icon" href="" type="image/png">
+        <link rel="shortcut icon" href="" type="image/x-icon">
+
+        <link rel="stylesheet" href="../../content/styles/reset.css">
+        <link rel="stylesheet" href="../../content/styles/templete.css">
+        <link rel="stylesheet" href="../../content/styles/style.css">
+        <script src="../../content/scripts/jquery-1.12.4.min.js"></script>
+        <script src="../../content/scripts/modal.js"></script>
+        <!--[if lte IE 8]>
+        <script src="../../content/scripts/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <main>
+            <div class="grid">
+                <img src="../../content/images/main/visual.png" alt="K5 X kakapmap Hide&Seek">
+                <img src="../../content/images/main/tutorial.png" alt="참여 방법">
+                <div class="gallery">
+                    <img src="../../content/images/main/gallery-tit.png" alt="신형 K5 미리보기">
+                    <div class="img-list">
+                        <ul class="list-lt">
+                            <li><img src="../../content/images/main/gallery-img-01.png" alt="신차 이미지"></li>
+                            <li><img src="../../content/images/main/gallery-img-03.png" alt="신차 이미지"></li>
+                        </ul>
+                        <ul class="list-rt">
+                            <li><img src="../../content/images/main/gallery-img-02.png" alt="신차 이미지"></li>
+                            <li><img src="../../content/images/main/gallery-img-04.png" alt="신차 이미지"></li>
+                        </ul>
+                    </div>
+                    <div class="btn-box">
+                        <a href="javascript:void(0);" title="이미지 더보기" class="btn"><img src="../../content/images/main/gallery-btn.png" alt="더보기 버튼"></a>
+                    </div>
+                </div> <!-- //신형 K5 미리보기 -->
+                <img src="../../content/images/main/gift.png" alt="경품">
+                <img src="../../content/images/main/notice.png" alt="행운의 K쿠폰 발표 / 문의처 / 안내사항">
+            </div>
+        </main>
+        <footer>
+            <div class="grid">
+                <img src="../../content/images/footer-ci-01.png" alt="K5 X kakapmap Hide&Seek">
+                <div class="copyright">
+                    <img src="../../content/images/footer-copy.png" alt="COPYRIGHT© KIA MOTORS CORP. ALL RIGHTS RESERVED. / 개인정보처리방침">
+                    <a href="javascript:void(0);" title="개인정보처리방침 페이지로 이동" class="btn"></a>
+                </div>
+                <img src="../../content/images/footer-ci-02.png" alt="KIA - The Power to Surprise">
+            </div>
+        </footer>
+        <div class="fixed-btn-box">
+            <div class="grid">
+                <a href="javascript:void(0);" title="K5 찾기 페이지로 이동" class="btn"><img src="../../content/images/main/fixed-btn-01.png" alt="K5 찾기"></a>
+                <a href="javascript:void(0);" title="내 쿠폰함 페이지로 이동" class="btn show-modal"><img src="../../content/images/main/fixed-btn-02.png" alt="내 쿠폰함 가기"></a>
+            </div>
+        </div> <!-- //고정 버튼 박스 -->
+        <div class="modal-popup">
+            <div class="modal-wrap coupon">
+                <div class="modal-cont success">
+                    <h3 class="tit">축하합니다!!</h3>
+                    <p>K5 자이언트를 찾아<br>행운의 쿠폰을 3장 얻었습니다!<br>지금 바로 확인하세요.</p>
+                    <div class="btn-box">
+                        <a href="javascript:void(0);" title="카카오계정으로 로그인하기" class="btn"><span class="label">카카오계정으로 로그인</span></a>
+                    </div>
+                </div>
+                <!-- <div class="modal-cont fail">
+                    <h3 class="tit">쿠폰 획득 실패<br>일일 이벤트 응모 횟수 초과</h3>
+                    <p>Hide & Seek 이벤트는<br>하루 15회까지 가능합니다.<br>내일 다시 지원해 주세요.</p>
+                    <div class="btn-box">
+                        <a href="javascript:void(0);" title="카카오계정으로 로그인하기" class="btn close-modal">닫기</a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <script>
+            $(document).ready(function(){
+                
+                $(window).scroll(function(){
+                    var windowST = $(window).scrollTop();
+                    $('.fixed-btn-box').addClass('active');
+                    if (windowST <= 0) {
+                        $('.fixed-btn-box').removeClass('active');
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

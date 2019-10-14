@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+/* font family : Spoqa Han Sans */
+@font-face {
+    font-family: 'Spoqa Han Sans';
+    font-weight: 700;
+    src: url('../fonts/SpoqaHanSansBold.woff2') format('woff2'),
+    url('../fonts/SpoqaHanSansBold.woff') format('woff'),
+    url('../fonts/SpoqaHanSansBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Spoqa Han Sans';
+    font-weight: 400;
+    src: url('../fonts/SpoqaHanSansRegular.woff2') format('woff2'),
+    url('../fonts/SpoqaHanSansRegular.woff') format('woff'),
+    url('../fonts/SpoqaHanSansRegular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Spoqa Han Sans';
+    font-weight: 300;
+    src: url('../fonts/SpoqaHanSansLight.woff2') format('woff2'),
+    url('../fonts/SpoqaHanSansLight.woff') format('woff'),
+    url('../fonts/SpoqaHanSansLight.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Spoqa Han Sans';
+    font-weight: 100;
+    src: url('../fonts/SpoqaHanSansThin.woff2') format('woff2'),
+    url('../fonts/SpoqaHanSansThin.woff') format('woff'),
+    url('../fonts/SpoqaHanSansThin.ttf') format('truetype');
+}
+
+/* layout */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    word-break: keep-all;
+    box-sizing: border-box;
+}
+main, article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section { 
+    display: block;
+}
+blockquote, q {
+    quotes: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+html {
+    overflow-x: hidden;
+}
+body {
+    overflow-x: hidden;
+    font-family: 'Spoqa Han Sans', 'Nanum Gothic','Malgun Gothic','돋움','dotum','AppleGothic', Helvetica, Arial, Sans-Serif;
+    font-size: 0;
+    line-height: 1;
+    letter-spacing: -0.25px;
+    color: #101010;
+}
+ul,
+ol {
+    list-style: none;
+}
+img {
+    border: 0;
+    vertical-align: top;
+}
+a {
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    text-decoration: none;
+    background: transparent;
+    vertical-align: baseline;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+}
+input, select, textarea, button {
+    font-family: 'Spoqa Han Sans', 'Nanum Gothic','Malgun Gothic','돋움','dotum','AppleGothic', Helvetica, Arial, Sans-Serif;
+    border: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+button {
+    cursor: pointer;
+}
+input::placeholder {
+    color: #999;
+}
+/* ::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #0e0000;
+}
+::-webkit-scrollbar-thumb {
+    background: #3cb58f; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #3cb58f; 
+}
+::selection {
+    background: transparent;
+    background-color: #eff5ff;
+    text-shadow: none;
+}
+::-webkit-selection {
+    background: transparent;
+    background-color: #eff5ff;
+    text-shadow: none;
+} */
