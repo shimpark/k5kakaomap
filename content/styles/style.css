@@ -189,7 +189,7 @@ section {
     text-align: center;
 }
 .cpn-default p {
-    font-size: 1.6rem;
+    font-size: 1.9rem;
     line-height: 1.5;
 }
 
@@ -517,6 +517,7 @@ section {
     font-size: 1.1rem;
     line-height: 2.5rem;
     color: #999;
+    -webkit-tap-highlight-color: transparent;
 }
 .modal-wrap.wng .gift-box {
     padding-top: 2rem;
@@ -535,6 +536,13 @@ section {
     color: #fff;
     background-color: #273788;
     border-top-color: #273788;
+}
+.modal-wrap.wng .term-box {
+    display: none;
+    padding: 1rem 0;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: #666;
 }
 .modal-wrap.wng .success .top {
     overflow: hidden;
@@ -681,7 +689,9 @@ section {
     color: #666;
 }
 .cpn-all .cpn-img {
+    display: inline-block;
     width: 3rem;
+    vertical-align: middle;
 }
 
 /*=======================================
@@ -951,7 +961,7 @@ section {
         padding: 1.5rem 0;
     }
     .cpn-all .cpn-img {
-        width: 2rem;
+        width: 2.25rem;
     }
 
 }

@@ -177,7 +177,7 @@
             <a href="javascript:void(0);" title="K5 찾기 페이지로 이동" class="btn"><img src="../../content/images/main/fixed-btn-01.png" alt="K5 찾기"></a>
             <a href="index.html" title="이벤트 소개 페이지로 이동" class="btn"><img src="../../content/images/sub/fixed-btn-03.png" alt="이벤트 소개"></a>
         </div> <!-- //고정 버튼 박스 -->
-        <div class="modal-popup">
+        <div class="modal-popup" >
             <div class="modal-wrap wng">
                 <div class="modal-cont success">
                     <div class="top">
@@ -204,10 +204,12 @@
                                     <label>휴대전화</label><input type="text" placeholder="- 제외하고 입력" maxlength="11">
                                 </div>
                                 <div class="chk-field">
-                                    <label><input type="checkbox"><span class="label">개인정보 수집 및 이용 동의</span><a href="javascript:void(0);" title="개인정보 수집 및 이용 동의 전문 보기">전문보기</a></label>
+                                    <label><input type="checkbox"><span class="label">개인정보 수집 및 이용 동의</span><a href="javascript:void(0);" title="개인정보 수집 및 이용 동의 전문 보기" class="tglterm-btn">전문보기</a></label> <!-- joy1016 -->
+                                    <div class="term-box">기아자동차㈜는 서비스 이용 시 이용자로부터 아래와 같은 개인 정보를 수집하고 있습니다. 이용자는 본 개인정보 수집·이용 동의서에 따른 동의 시, '필요한 최소한의 정보 외에 개인정보' 수집·이용에 동의하지 아니할 권리가 있습니다. 개인정보 취급 및 처리에 대한 상세한 사항은 사이트 하단에 공개한 '개인정보 처리방침'을 참조하십시오. 다만, 본 동의서 내용과 상충되는 부분은 본 동의서의 내용이 우선합니다.<br><br>1) 수집하는 개인정보의 이용목적<br>: 이벤트 당첨자 경품 발송<br><br>2) 수집 항목<br>필수 : 이름 / 휴대전화<br><br>3) 보유 및 이용기간<br>위 개인정보는 수집이용목적(이벤트 당첨자 확인)이 달성되면 즉시 폐기합니다.<br><br>4) 동의 거부의 권리<br>귀하는 개인정보 수집·이용에 동의하지 않으실 수 있습니다. 다만, 동의 거부 시 이벤트 당첨 경품 발송이 제한될 수 있습니다.</div> <!-- joy1016 -->
                                 </div>
                                 <div class="chk-field">
-                                    <label><input type="checkbox"><span class="label">개인정보 위탁 동의</span><a href="javascript:void(0);" title="개인정보 위탁 동의 전문 보기">전문보기</a></label>
+                                    <label><input type="checkbox"><span class="label">개인정보 위탁 동의</span><a href="javascript:void(0);" title="개인정보 위탁 동의 전문 보기" class="tglterm-btn">전문보기</a></label> <!-- joy1016 -->
+                                    <div class="term-box">기아자동차㈜는 서비스 이행을 위해 아래와 같이 개인정보 처리 업무(행사/이벤트 안내 및 운영 포함)를 외부 전문업체에 위탁하여 처리하고 있습니다. 개인정보 처리위탁은 개별 서비스별로 그 이행을 위해 필요한 경우에 한해 각 위탁업체에 대해 이루어집니다. 업체가 변경될 경우, 웹사이트 공지사항(또는 서면·이메일·전화·SMS 등의 방법으로 개별공지)을 통하여 알려 드리겠습니다.<br><br>- 대학내일 이벤트 당첨 경품 발송<br><br>※ 귀하께서는 개인정보 처리에 대한 동의를 거부하실 수 있으며, 동의를 거부하시더라도 홈페이지의 일부 기능은 이용이 가능합니다. 다만 동의를 거부하실 경우 이벤트 당첨 경품 발송이 제한될 수 있습니다.</div> <!-- joy1016 -->
                                 </div>
                             </form>
                         </div>
@@ -290,6 +292,9 @@
                     if ($('.scltop-btn').offset().top + $(".scltop-btn").height() > $("footer").offset().top) {
                         $('.scltop-btn').removeClass('active');
                     }
+                });
+                $('.tglterm-btn').click(function(){ //joy1016
+                    $(this).parent($('label')).next($('.term-box')).slideToggle(250);
                 });
             });
         </script>
